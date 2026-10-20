@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>Kelompok 1</title>
+
+    <style>
+      /* responsives Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to right, #f4f1ea, #77ca66);
+}
+
+.page {
+    display: block;
+}
+
+section[id] {
+    scroll-margin-top: 90px;
+}
+
+
+
+.foto {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 816px;
+}
+
+.image-beranda {
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    height: 816px;
+    object-fit: cover;
+    border: 6px solid #f4f1ea;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    padding: 6px;
+}
+
+.text-beranda {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: 0;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 117px;
+    z-index: 1;
+    margin-top: 85px;
+}
+
+.foto .btn {
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    transform: translateX(-50%);
+    z-index: 2;
+    padding: 12px 28px;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.ucapan-sambutan {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.head-salam {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.salam {
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+
+.head-pilih {
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+/* Card Group */
+.cards-row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.cards-row > div {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cards-row > div > a.btn {
+    display: block;
+    height: 100%;
+    padding: 0;
+    color: inherit;
+    text-align: left;
+}
+
+.cards-row .card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-row .card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.cards-row .card-body {
+    flex: 1;
+}
+
+.isi-berita {
+    font-family:'Times New Roman', Times, serif;
+}
+
+.modal-title {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.head-berita {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.berita-hero-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    margin: 0 auto 1rem;
+    background: #f3f3f3;
+}
+
+.berita {
+    margin-top: 54px;
+}
+
+.button {
+    margin-top: 55px;
+}
+
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2cb32c;
+     height: var(--footer-height, 80px);
+}
+
+.textf {
+    display: inline-block;
+    margin: 0;
+    padding: 12px 22px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+    .contact {
+        margin-top: 64px;
+        font-size: 15px;
+        margin-left: 62px;
+    }
+
+    .kontak {
+        font-size: 32px;
+    }
+
+    .alamat {
+        margin-top: 0;
+    }
+
+    .isikontak {
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    .data {
+        text-align: center;
+        margin-top: 27px;
+    }
+
+    .tentang {
+        margin-top: 47px;
+        margin-left: 25px;
+    }
+
+    .sejarah {
+        font-size: 32px;
+    }
+
+.gg {
+    position: relative;
+    width: min(95%, 900px);
+    margin: 0 auto 24px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.gg .img {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: 320px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+.gg .text-beranda {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    margin: 0;
+    padding: 0 16px;
+    font-size: clamp(20px, 2vw, 32px);
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    line-height: 1.3;
+    text-align: center;
+    z-index: 1;
+}
+
+    
+    .head-struk {
+        margin-top: 16px;
+    }
+
+    .isi-struk {
+        margin-top: 16px;
+    }
+
+    
+    
+#isi {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.menu-grid {
+    width: min(900px, 90%);
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.menu-row {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.menu-row .btn {
+    min-width: 220px;
+    flex: 1 1 220px;
+    max-width: 260px;
+    padding: 12px 18px;
+    font-weight: 600;
+}
+
+#isi .modal {
+    z-index: 2000;
+}
+
+    .visi-misi {
+        margin-top: 16px;
+    }
+
+    .modal-dialog {
+        max-width: 1100px !important;
+        width: calc(100% - 30px);
+    }
+
+    .modal-content {
+        border-radius: 16px;
+    }
+
+    .modal-body {
+        padding: 1.5rem 1.75rem;
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    .modal-body .identitas,
+    .modal-body .terakhir,
+    .modal-body .visi-misi {
+        margin-top: 18px;
+        padding: 14px 16px;
+        border-left: 4px solid #28a745;
+        background: #f8f9fa;
+        border-radius: 10px;
+    }
+
+    .button {
+        margin-top: 53px;
+    }
+
+
+
+/* Loading Screen Styles */
+     * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #loading-screen {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            background: #ffffff;
+
+            z-index: 9999;
+
+            opacity: 1;
+            visibility: visible;
+
+            transition:
+                opacity 0.6s ease,
+                visibility 0.6s ease;
+        }
+
+        #loading-screen.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loading-logo {
+            width: 120px;
+            height: 120px;
+
+            object-fit: contain;
+
+            margin-bottom: 20px;
+
+            animation: logoAnimation 1.5s ease-in-out infinite;
+        }
+
+        @keyframes logoAnimation {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .loading-title {
+            font-size: 28px;
+            font-weight: bold;
+
+            color: #222222;
+
+            margin-bottom: 8px;
+
+            text-align: center;
+        }
+
+        .loading-text {
+            font-size: 16px;
+
+            color: #666666;
+
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+
+        .spinner {
+            width: 45px;
+            height: 45px;
+
+            border: 4px solid #dddddd;
+            border-top: 4px solid #146b28;
+
+            border-radius: 50%;
+
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #website {
+            min-height: 100vh;
+            padding: 50px;
+
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+ <div id="loading-screen">
+        <!-- GANTI FOTO LOGO -->
+        <img class="loading-logo" src="https://static.vecteezy.com/system/resources/thumbnails/068/217/781/small/black-phoenix-bird-silhouette-logo-on-white-background-isolated-on-transparent-background-vector.jpg" alt="Logo">
+        <!-- GANTI JUDUL -->
+        <h1 class="loading-title">Madura.id</h1>
+        <!-- GANTI TEKS -->
+        <p class="loading-text">Tungguin Ya, Ingat Orang Sabar Disayang waifu</p>
+        <!-- LOADING -->
+        <div class="spinner"></div>
+    </div>
+
+    
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success" style="position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); opacity: 72%;">
+  <div class="navbar-brand"><img src="https://static.vecteezy.com/system/resources/thumbnails/068/217/781/small/black-phoenix-bird-silhouette-logo-on-white-background-isolated-on-transparent-background-vector.jpg" alt="" width="32" height="32" class="mr-2 rounded-circle">Madura.id</div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#Beranda">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#Berita">Berita</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#kontak">kontak</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</!-- Navbar End -->
+
+
+<!-- Beranda Start -->
+<section id="Beranda" class="page">
+<div class="foto">
+<img src="https://media.suara.com/pictures/653x366/2026/03/17/72693-masjid-unik-di-jalur-mudik-lebaran-masjid-kapal-wanareja-masjid-as-shodiqin.jpg" alt="foto beranda" class="image-beranda">
+<h1 class="text-beranda">Selamat Datang di Madura.id</h1>
+<a class="btn btn-success" href="#sambutan">Lihat Informasi Desa</a>
+</div>
+
+
+<!-- Pembuka Start -->
+ <section id="sambutan" class="page">
+<div class="ucapan-sambutan">
+<h2 class="head-salam">Selamat Datang Di Website Kami</h2>
+<p class="salam">Web ini diciptakan untuk mempermudah dalam penyampaian informasi tentang desa Madura beserta kegiatan dan berita yang ada di desa tersebut.</p>
+</div>
+</!-- Pembuka End -->
+
+
+<!-- Deskripsi Singkat Sejarah Desa Start-->
+<div class="tentang">
+<h1 class="sejarah">Sejarah Desa Madura</h1>
+<p class="sejarah-isi">Menurut legenda yang berkembang di masyarakat, asal-usul Desa Madura berkaitan dengan cerita peperangan antara Kerajaan Galuh dan Mataram pada masa lampau. Dalam cerita tersebut, pasukan Galuh berhenti dan membuat pertahanan di sebuah daerah perbukitan yang dikenal dengan nama Pasir Nagog.
+Ketika berada di wilayah tersebut, para tentara menemukan jejak seorang pengembara yang sedang mencari madu. Madu pada masa itu dianggap sebagai bahan alami yang memiliki banyak manfaat. Dari cerita mengenai Cimadu/Cai Madu, yang berarti air madu, kemudian berkembanglah nama Madura. Nama tersebut dipercaya berkaitan dengan madu yang ditemukan oleh pengembara di wilayah tersebut.
+Singkatnya: nama Madura dipercaya berasal dari cerita Cimadu/Cai Madu (air madu), kemudian desa berkembang menjadi wilayah pemerintahan yang tercatat berdiri sejak 1860 dan terus mengalami perkembangan serta pemekaran wilayah hingga sekarang.</p>
+</div>
+ </section>
+</!-- Deskripsi Singkat Sejarah Desa End -->
+
+
+<!-- Menu Pilihan Informasi Start -->
+ <!-- Modal Button Start -->
+  <div class="button">
+<section id="pilih" class="page">
+  <div class="menu-grid">
+    <div class="menu-row">
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#profilModal" aria-label="Buka profil desa">
+        Profil
+      </button>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#pemerintahanModal">
+        Pemerintahan
+      </button>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#potensiModal">
+        Potensi Desa
+      </button>
+    </div>
+    <div class="menu-row">
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#strukturModal">
+        Struktur Organisasi Desa
+      </button>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#galeriModal">
+        Galeri Desa
+      </button>
+    </div>
+  </div>
+  </div>
+</!-- Modal Button End -->
+
+<!-- isi informasi start -->
+  <section id="profil">
+    <div class="modal fade" id="profilModal" tabindex="-1" aria-labelledby="profilModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="profilModalLabel">Profil Desa</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>Profil Desa</h1>
+            <p>Desa Madura merupakan salah satu desa yang berada di wilayah<br>
+            Kecamatan Wanareja, Kabupaten Cilacap, Provinsi Jawa Tengah.<br>
+            Desa Madura memiliki pemerintahan desa yang menyelenggarakan<br>
+            pelayanan kepada masyarakat serta melaksanakan pembangunan dan pemberdayaan masyarakat.<br>
+            Pemerintah Desa Madura memiliki komitmen untuk mewujudkan desa yang mandiri, sejahtera, tertib, aman, dan religius.<br>
+            Hal tersebut juga tercantum dalam informasi resmi Desa Madura.<br>
+            <div class="identitas">
+            Identitas Desa:<br>
+            * Nama Desa: Madura<br>
+            * Kecamatan: Wanareja<br>
+            * Kabupaten: Cilacap<br>
+            * Provinsi: Jawa Tengah<br>
+            * Kode Pos: 53265<br>
+            * Alamat Kantor Desa: Jl. Gajah Mada No. 17, Desa Madura<br>
+            * Telepon: (0280) 6262452<br>
+            </div>
+            <div class="terakhir">
+            Desa Madura merupakan desa yang memiliki kehidupan masyarakat dengan berbagai<br>
+            kegiatan sosial, ekonomi, dan kemasyarakatan. Pemerintah desa menyediakan berbagai pelayanan administrasi<br>
+            seperti surat keterangan penduduk, surat keterangan usaha, pengantar SKCK, permohonan KK, KTP, dan surat keterangan pindah.<br>
+            <div class="visi-misi">
+            VISI<br>
+            “Mewujudkan Desa Madura yang maju, mandiri, sejahtera, aman, dan berdaya saing melalui pembangunan yang berkelanjutan serta pelayanan masyarakat yang transparan dan berkualitas.”<br>
+            MISI<br>
+            Meningkatkan kualitas pelayanan masyarakat yang cepat, mudah, transparan, dan adil.<br>
+            Meningkatkan pembangunan desa yang merata, terutama dalam bidang infrastruktur, pendidikan, kesehatan, dan fasilitas umum.<br>
+            Mengembangkan potensi ekonomi masyarakat melalui UMKM, pertanian, peternakan, dan usaha lokal.<br>
+            Meningkatkan kualitas sumber daya manusia melalui pendidikan, pelatihan, dan kegiatan pemberdayaan masyarakat.<br>
+            Menjaga keamanan, ketertiban, dan kerukunan masyarakat serta memperkuat semangat gotong royong.<br>
+            Melestarikan lingkungan dan potensi budaya desa agar tetap terjaga dan dapat dikembangkan secara berkelanjutan.<br>
+            Mewujudkan tata kelola pemerintahan desa yang baik, bertanggung jawab, dan melibatkan masyarakat dalam pembangunan.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pemerintahan">
+    <div class="modal fade" id="pemerintahanModal" tabindex="-1" aria-labelledby="pemerintahanModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="pemerintahanModalLabel">Pemerintahan</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1 class="pem">Pemerintahan Desa</h1>
+            <p>
+            Pemerintahan Desa Madura merupakan penyelenggara pemerintahan di tingkat desa yang<br>
+            bertugas memberikan pelayanan kepada masyarakat, menjalankan pembangunan desa, melakukan pembinaan kemasyarakatan, serta memberdayakan masyarakat.<br>
+            Dalam pelaksanaan pemerintahan, Kepala Desa menjadi pimpinan pemerintahan desa yang dibantu oleh perangkat desa. Selain pemerintah desa,<br>
+            terdapat pula Badan Permusyawaratan Desa (BPD) yang berperan dalam fungsi permusyawaratan dan pengawasan sesuai ketentuan pemerintahan desa.<br>
+            Beberapa bidang utama dalam penyelenggaraan pemerintahan desa meliputi:<br>
+            <div class="bidang">
+            1. Penyelenggaraan pemerintahan desa<br>
+                * Pelayanan administrasi masyarakat.<br>
+                * Pengelolaan administrasi desa.<br>
+                * Pengelolaan keuangan dan aset desa.<br>
+            2. Pelaksanaan pembangunan<br>
+                * Pembangunan dan pemeliharaan infrastruktur.<br>
+                * Peningkatan fasilitas pelayanan masyarakat.<br>
+                * Pembangunan sarana ekonomi dan sosial.<br>
+            3. Pembinaan kemasyarakatan<br>
+                * Pembinaan kegiatan sosial.<br>
+                * Pembinaan kepemudaan.<br>
+                * Pembinaan kehidupan bermasyarakat.<br>
+            4. Pemberdayaan masyarakat<br>
+                * Pengembangan usaha masyarakat.<br>
+                * Peningkatan keterampilan.<br>
+                * Pengembangan potensi ekonomi desa.<br>
+            </div>
+            Situs resmi Desa Madura juga menunjukkan adanya kegiatan pemerintahan seperti musyawarah desa, pelaporan APBDes, serta pelantikan perangkat desa.<br>
+            Pada 1 Mei 2025, misalnya, dilaksanakan pengambilan sumpah dan pelantikan perangkat desa hasil penjaringan untuk mengisi kekosongan jabatan perangkat Desa Madura.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="potensi">
+    <div class="modal fade" id="potensiModal" tabindex="-1" aria-labelledby="potensiModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="potensiModalLabel">Potensi Desa</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h2>Potensi Desa Madura</h2>
+            <p>Desa Madura mempunyai berbagai potensi yang dapat dikembangkan untuk meningkatkan kesejahteraan masyarakat.</p>
+            <h2>Potensi Pertanian</h2>
+            <p>Pertanian merupakan salah satu sektor yang penting bagi masyarakat pedesaan. Lahan pertanian dapat dimanfaatkan untuk menghasilkan berbagai komoditas pertanian serta menjadi sumber pendapatan masyarakat.<br>
+            Potensi ini dapat dikembangkan melalui:<br>
+            * peningkatan produktivitas pertanian<br>
+            * pemanfaatan teknologi pertanian<br>
+            * pengembangan hasil pertanian<br>
+            * pemasaran hasil pertanian secara lebih luas
+            </p>
+            <h2>Potensi Perdagangan dan UMKM</h2>
+            <p>Kegiatan perdagangan dan usaha mikro masyarakat dapat menjadi salah satu penggerak perekonomian desa.<br>
+            Potensi UMKM dapat dikembangkan melalui:<br>
+            * makanan dan minuman<br>
+            * kerajinan<br>
+            * perdagangan kebutuhan sehari-hari<br>
+            * usaha jasa<br>
+            * pemasaran produk melalui media digital
+            </p>
+            <h2>Potensi Sumber Daya Manusia</h2>
+            <p>Masyarakat merupakan salah satu modal penting dalam pembangunan desa. Dengan peningkatan keterampilan dan pendidikan, masyarakat dapat berperan lebih besar dalam mengembangkan ekonomi desa.</p>
+            <h2>Potensi Sosial dan Budaya</h2>
+            <p>Kehidupan masyarakat desa yang menjunjung kearifan lokal dan gotong royong merupakan potensi sosial yang dapat mendukung pembangunan desa. Pemerintah Desa Madura sendiri menyebutkan bahwa desa menjunjung tinggi kearifan lokal dalam kehidupan bermasyarakat. </p>
+            <h2>Potensi Ekonomi Desa</h2>
+            <p>Pengembangan potensi ekonomi dapat dilakukan melalui pemberdayaan masyarakat, pengembangan UMKM, perdagangan, pertanian, serta kegiatan ekonomi lainnya.
+            Data pemerintah Jawa Tengah juga menyediakan data Indeks Desa Membangun (IDM) Kecamatan Wanareja tahun 2024, yang mencakup aspek ketahanan sosial, ekonomi, dan ekologi desa.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="struktur">
+    <div class="modal fade" id="strukturModal" tabindex="-1" aria-labelledby="strukturModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="strukturModalLabel">Struktur Organisasi Desa</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1 class="head-struk">Struktur Organisasi Pemerintahan Desa</h1>
+            <p class="isi-struk">
+            KEPALA DESA<br>
+            ↓<br>
+            SEKRETARIS DESA<br>
+            ↓<br>
+            KAUR TATA USAHA DAN UMUM<br>
+            KAUR KEUANGAN<br>
+            KAUR PERENCANAAN<br>
+            ↓<br>
+            KASI PEMERINTAHAN<br>
+            KASI KESEJAHTERAAN<br>
+            KASI PELAYANAN<br>
+            ↓<br>
+            KEPALA DUSUN / KEPALA WILAYAH
+            Di luar struktur perangkat desa tersebut terdapat:<br>
+
+            BPD (Badan Permusyawaratan Desa)<br>
+            → berfungsi sebagai lembaga permusyawaratan desa yang menjadi bagian penting dalam penyelenggaraan pemerintahan desa.<br>
+            RT/RW<br>
+            → membantu pelayanan dan koordinasi masyarakat di tingkat lingkungan.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeri">
+    <div class="modal fade" id="galeriModal" tabindex="-1" aria-labelledby="galeriModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="galeriModalLabel">Galeri Desa</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="gg mt-4">
+              <img src="assets/kantor.JPG" alt="foto kantor" class="img">
+              <h1 class="text-beranda">Kantor Desa Madura</h1>
+            </div>
+            <div class="gg mt-4">
+              <img src="assets/alun.webp" alt="foto alun-alun" class="img">
+              <h1 class="text-beranda">Alun-alun Madura</h1>
+            </div>
+            <div class="gg mt-4">
+              <img src="assets/masjid.jpeg" alt="foto masjid" class="img">
+              <h1 class="text-beranda">Masjid Unik</h1>
+            </div>
+            <div class="gg mt-4">
+              <img src="assets/toroan.jpeg" alt="foto toroan" class="img">
+              <h1 class="text-beranda">Air Terjun Toroan</h1>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+</!-- isi informasi end -->
+</!-- Menu Pilihan Informasi End -->
+
+
+<!-- Penyampaian Berita Start -->
+ <section id="Berita" class="page">
+<div class="berita">
+<h2 class="head-berita">Berita Desa</h2>
+<div class="container">
+  <div class="row mt-2 cards-row">
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <a type="button" class="btn" data-toggle="modal" data-target="#beritaModal">
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgQaEyBm5rK6K95F07XlFl_adPtPMMCXGmZai3z3bZzQ&s" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Bantuan Pangan</h5>
+          <p class="card-text">Penyaluran Bantuan Cadangan Pangan Pemerintah di Desa Madura.</p>
+        </div>
+      </div>
+      </a>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <a type="button" class="btn" data-toggle="modal" data-target="#berita1Modal">
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzNpNy6oMuXfOT1xQs11J3-prAEtAu3q0S1bPk0Ha63Q&s=10" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Kabar Bencana</h5>
+          <p class="card-text">Banjir di Desa Madura Cilacap Mulai Surut.</p>
+        </div>
+      </div>
+      </a>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <a type="button" class="btn" data-toggle="modal" data-target="#berita2Modal">
+      <div class="card">
+        <img src="https://media.suara.com/pictures/653x366/2026/03/17/97648-masjid-unik-di-jalur-mudik-lebaran-masjid-kapal-wanareja-masjid-as-shodiqin.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Masjid Berbentuk Perahu</h5>
+          <p class="card-text">H Engking Sosok Dibalik Viralnya Mesjid Berbentuk Perahu.</p>
+        </div>
+      </div>
+      </a>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <a type="button" class="btn" data-toggle="modal" data-target="#berita3Modal">
+      <div class="card">
+        <img src="https://cdn-jpr.jawapos.com/images/21/2024/11/09/Ft-laka-di-tol-beji-gempas-3-212254449.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tragedi Kecelakaan</h5>
+          <p class="card-text">Kecelakaan Luxio dan 3 Motor di Madura Wanareja.</p>
+        </div>
+      </div>
+      </a>
+    </div>
+
+  </div>
+</div>
+</div>
+ </section>
+</!-- Penyampaian Berita End -->
+
+<!-- isi berita start -->
+<section id="berita">
+      <div class="modal fade" id="beritaModal" tabindex="-1" aria-labelledby="beritaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="beritaModalLabel">News</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h1 class="head-berita">Penyaluran Bantuan Cadangan Pangan Pemerintah di Desa Madura</h1>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgQaEyBm5rK6K95F07XlFl_adPtPMMCXGmZai3z3bZzQ&s" class="berita-hero-image" alt="foto berita">
+              <p class="isi-berita">
+                Dua desa di wilayah Kecamatan Wanareja, yaitu Desa Madura dan Desa Madusari, melaksanakan Penyaluran Bantuan Cadangan Pangan Pemerintah (CPP) berupa Cadangan Beras Pemerintah (CBP) tahap III tahun 2024. Kegiatan ini dilaksanakan di Balai Desa setempat pada Selasa, 30 Januari 2024.
+                Bantuan yang disalurkan pada tahap III tahun 2024 ini diperuntukkan bagi warga masyarakat yang telah menerima undangan dari Pemerintah Desa. Para penerima diharapkan membawa undangan, Kartu Tanda Penduduk (KTP), dan Kartu Keluarga (KK) asli sebagai bukti identitas. Hal ini diungkapkan oleh Nursidik, selaku Kepala Desa Madura.
+                “Nini merupakan bantuan alokasi tahap III tahun 2024 bagi warga masyarakat yang terlebih dahulu menerima undangan yang diberikan melalui Pemerintah Desa, serta untuk penerima harus membawanya saat mengambil bantuan beserta KTP dan KK asli sebagai bukti yang bersangkutan,” ujar Nursidik.<br>
+                Nursidik juga menambahkan harapannya agar para penerima bantuan dapat memanfaatkannya dengan benar, khususnya untuk dikonsumsi.
+                Sementara itu, Kepala Desa Madusari, Sukrayatno, menekankan bahwa penyaluran bantuan ini dilakukan oleh petugas dan juru serah dari PT Pos Indonesia, dengan bantuan Pemerintah Desa.
+                “Kami berpesan kepada semua penerima bantuan, untuk selalu menciptakan situasi yang kondusif serta aman, tertib, dan nyaman di lingkungan masyarakat,” tegas Sukrayatno.<br>
+                Jumlah warga penerima bantuan mencapai 1123 orang untuk Desa Madura dan 433 orang untuk Desa Madusari. Surip, salah seorang penerima, mengucapkan terima kasih kepada Pemerintah Desa dan Pemerintah Pusat atas bantuan yang diberikan.
+                “Kami mengucapkan terima kasih kepada Pemerintah Desa dan juga Pemerintah Pusat yang telah memberikan bantuan ini kepada kami. Tentunya, bantuan ini akan kami manfaatkan sebaik-baiknya,” ujar Surip.<br>
+                “Sekali lagi, terima kasih, dan bantuan ini tentunya sangat meringankan beban hidup kami sekeluarga,” pungkasnya dengan rasa syukur.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="berita">
+      <div class="modal fade" id="berita1Modal" tabindex="-1" aria-labelledby="berita1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="berita1ModalLabel">News</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h1 class="head-berita">Bencana Mulai Mereda Di Desa Madura</h1>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzNpNy6oMuXfOT1xQs11J3-prAEtAu3q0S1bPk0Ha63Q&s=10" class="berita-hero-image" alt="foto berita1">
+              <p class="isi-berita">
+               Bencana banjir yang melanda Desa Madura, Kabupaten Cilacap, Jawa Tengah, mulai surut, kata Kepala Pelaksana Harian Badan Penanggulangan Bencana Daerah (BPBD) Cilacap Tri Komara Sidhy.
+               "Kebetulan tadi malam tidak hujan sehingga genangannya mulai surut," katanya di Cilacap, Jumat.
+               Kendati demikian, dia mengatakan 43 keluarga yang terdiri atas 167 jiwa masih berada di tiga lokasi pengungsian.
+               Pihaknya telah menyalurkan bantuan bahan makanan untuk korban banjir, sedangkan pengobatan dilayani oleh Puskesmas Wanareja.
+               "Besok hari Sabtu (18/11) dan Minggu (19/11) akan dilaksanakan kerja bakti untuk menangani tanggul yang jebol. 
+               Kerja bakti tersebut melibatkan personel Balai Besar Wilayah Sungai Citanduy, BPBD Cilacap, Forum Komunikasi Pimpinan Kecamatan Wanareja, masyarakat setempat, dan sukarelawan," katanya
+               Banjir yang melanda Dusun Margasari dan Purwasari, Desa Madura, Kecamatan Wanareja, terjadi sejak Rabu (15/11), pukul 00.30 WIB akibat jebolnya tanggul Sungai Cibaganjing di Dusun Purwasari, Desa Madura.
+               Tanggul sungai tersebut jebol sepanjang 16 meter di empat titik akibat hujan dengan intensitas tinggi yang terjadi sejak Selasa (14/11).
+               Berdasarkan data BPBD Cilacap, jumlah warga yang terdampak banjir 321 jiwa meliputi 92 keluarga.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="berita">
+      <div class="modal fade" id="berita2Modal" tabindex="-1" aria-labelledby="berita2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="berita2ModalLabel">News</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h1 class="head-berita">Sebuah Masjid Dengan Infrstruktur Unik di Desa Madura</h1>
+              <img src="https://media.suara.com/pictures/653x366/2026/03/17/97648-masjid-unik-di-jalur-mudik-lebaran-masjid-kapal-wanareja-masjid-as-shodiqin.jpg" class="berita-hero-image" alt="foto berita">
+              <p class="isi-berita">
+                Masjid berbentuk kubah sudah biasa. Namun di tepi jalur selatan Pulau Jawa, berdiri sebuah masjid yang tampil punya desain mirip perahu raksasa yang terlihat mengapung di tengah danau.
+                Masjid yang diberi nama As Shodiqin itu berada di Desa Madura, Kecamatan Wanareja, Kabupaten Cilacap, tepat di perbatasan Jawa Tengah dan Jawa Barat. Sekilas, bangunan megah ini tampak seperti sebuah bahtera besar. 
+                Siapa sangka jika bangunan mirip kapal raksasa ini adalah masjid.
+                Masjid ini berdiri di atas lahan seluas lima hektare. Masjid itu juga dikeliling andau buatan yang dibuat menyerupai andau alami, sehingga bangunannya tampak seolah mengapung di permukaan air.
+                "Ya ini yang utama ingin tampil beda saja dengan masjid-masjid yang lain. Kalau diserupai masjid, dibikinnya masjid perahu kan. Ini akan menjadi ikon. Apalagi di sini kan jalur nasional antara Jawa Tengah dan Jawa Barat, jadi yang lewat melihat masjid perahu kan beda, unik, pasti tertarik," ujar pengurus masjid, Nursidik kepada wartawan,
+                Jumat (6/3/2026).
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="berita">
+      <div class="modal fade" id="berita3Modal" tabindex="-1" aria-labelledby="berita3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="berita3ModalLabel">News</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h1 class="head-berita">Kecelakaan Lalu Lintas Di Desa Madura</h1>
+              <img src="https://cdn-jpr.jawapos.com/images/21/2024/11/09/Ft-laka-di-tol-beji-gempas-3-212254449.jpg" class="berita-hero-image" alt="foto berita">
+              <p class="isi-berita">
+                Kanit Gakkum Satlantas Polresta Cilacap, Iptu Adim Haryoko membeberkan kronologi kecelakaan kecelakaan lalu lintas yang terjadi di Jalan Raya Majenang-Banjar di Desa Madura, Kecamatan Wanareja, Kabupaten Cilacap, Rabu (5/2/2025).
+                Seorang pengendara sepeda motor meninggal dunia dan tiga korban lainnya mengalami luka ringan.
+                Kecelakaan yang terjadi pada pukul 06.30 WIB ini melibatkan satu mobil jenis minibus dan juga tiga sepeda motor.<br>
+
+                Iptu Adim Haryoko menjelaskan, kecelakaan bermula saat mobil jenis minibus Luxio dengan nopol E-1041-LG yang dikemudikan oleh Thoat Bayu Supriyono. warga Majenang, Cilacap melaju dari arah barat ke timur.
+                Searah di depannya, ada dua unit sepeda motor yakni motor Vega dengan nopol R-5215-QT dan motor Vixion dengan nopol R-6349-JN yang berhenti di tengah jalan.
+                Karena jarak mobil dan kedua sepeda motor itu sudah dekat sehingga terjadi benturan di lokasi kejadian.
+                "Kedua sepeda motor saat itu berhenti karena hendak berbelok ke arah kanan," jelas Adim kepada Tribunbanyumas.com.<br>
+
+                Dikatakan Adim bahwa usai benturan itu, sepeda motor Vega yang dikendarai Agus Triyatmoko, warga setempat, terseret dan oleng hingga membentur orang yang sedang menyeberangkan anak sekolah.
+                Akibat kecelakaan tersebut, pengendara Scoopy Rena Kusuma Ningrum warga Desa Majingklak, Kecamatan Wanareja meninggal dunia.
+                Rena mengalami sejumlah luka di bagian tubuhnya seperti kepala robek, kaki kiri robek dan robek pada mata kiri.
+                "Korban meninggal dunia saat menjalani perawatan medis di RSUD Majenang," kata dia.
+                Selain itu kecelakaan juga menyebabkan tiga korban lainnya mengalami sejumlah luka.
+                Pembonceng motor Vixion yakni Arva Putra Pratama mengalami lecet pada bagian dahi, kaki kanan, tangan kanan. 
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</!-- isi berita End -->
+
+<!-- Data Penduduk -->
+<div class="data p-4 rounded text-center my-5">
+    <h2 class="data-des mb-3">Data Penduduk</h2>
+    <ul class="list-group list-group-flush d-inline-block border rounded text-left bg-white">
+        <li class="list-group-item bg-transparent">
+            Jumlah penduduk: <strong id="jumlah-penduduk">0</strong> jiwa
+        </li>
+        <li class="list-group-item bg-transparent">
+            Jumlah KK: <strong id="jumlah-kk">0</strong> KK
+        </li>
+        <li class="list-group-item bg-transparent">
+            Laki-laki: <strong id="laki-laki">0</strong> jiwa |
+            Perempuan: <strong id="perempuan">0</strong> jiwa
+        </li>
+        <li class="list-group-item bg-transparent">
+            Usia 0–15 tahun: <strong id="usia-0-15">0</strong> jiwa
+        </li>
+        <li class="list-group-item bg-transparent">
+            Usia 15–65 tahun: <strong id="usia-15-65">0</strong> jiwa
+        </li>
+        <li class="list-group-item bg-transparent">
+            Usia 65 tahun ke atas: <strong id="usia-65">0</strong> jiwa
+        </li>
+    </ul>
+</div>
+</!-- Data Penduduk End -->
+
+
+<!-- Kontak Start -->
+      <section id="kontak" class="my-5 p-4">
+        <h2>Informasi Kontak</h2>
+        <p class="mb-1"><strong>Alamat:</strong> Jl. Gajah Mada No. 17, Desa Madura, Kec. Wanareja, Kab. Cilacap, Jawa Tengah, 53265.</p>
+        <p class="mb-1"><strong>Telepon:</strong> (0280) 6262452</p>
+        <p class="mb-0"><strong>Email:</strong> madura@wanareja.com</p>
+      </section>
+    </div>
+  </section>
+</!-- Kontak End -->
+
+</section>
+</!-- Beranda End -->
+
+</body>
+
+
+
+<!-- Kaki Web Start -->
+<footer>
+  <div class="footer">
+    <p class="textf">Build &copy; 2026 Madura.id By G1</p>
+  </div>
+</footer>
+</!-- Kaki Web End -->
+
+<script>
+  //--loading screen--//
+window.addEventListener("load", function () {
+
+            const loadingScreen =
+                document.getElementById("loading-screen");
+
+            /*
+             * WAKTU LOADING
+             *
+             * 2000 = 2 detik
+             * 3000 = 3 detik
+             * 5000 = 5 detik
+             */
+
+            setTimeout(function () {
+
+                loadingScreen.classList.add("hide");
+
+            }, 3100);
+
+        });
+//--loading screen--//
+
+
+
+
+//--animasi angka--//
+ function animateCount(elementId, target, duration = 3100) {
+        const element = document.getElementById(elementId);
+        const startTime = performance.now();
+
+        function update(currentTime) {
+            const progress = Math.min(
+                (currentTime - startTime) / duration,
+                1
+            );
+
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+
+            const currentValue = Math.floor(target * easeOut);
+
+            element.textContent = currentValue.toLocaleString('id-ID');
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            } else {
+                element.textContent = target.toLocaleString('id-ID');
+            }
+        }
+
+        element.textContent = "0";
+        requestAnimationFrame(update);
+    }
+
+
+    const dataSection = document.querySelector(".data");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    animateCount("jumlah-penduduk", 14481);
+                    animateCount("jumlah-kk", 4888);
+                    animateCount("laki-laki", 7253);
+                    animateCount("perempuan", 7228);
+                    animateCount("usia-0-15", 2742);
+                    animateCount("usia-15-65", 10058);
+                    animateCount("usia-65", 1681);
+
+                }
+
+            });
+        },
+        {
+            threshold: 0.3
+        }
+    );
+
+    observer.observe(dataSection);
+//--animasi angka--//
+
+
+
+
+//--animasi card--//
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(function (card) {
+
+    card.addEventListener("mouseenter", function () {
+        card.style.transition = "0.3s";
+        card.style.transform = "translateY(-7px)";
+    });
+
+    card.addEventListener("mouseleave", function () {
+        card.style.transform = "translateY(0)";
+    });
+
+});
+//--animasi card--//
+
+
+
+
+
+//--animasi modal--//
+$(document).on("show.bs.modal", ".modal", function (event) {
+    const modalContent = event.target.querySelector(".modal-content");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!modalContent || prefersReducedMotion || typeof modalContent.animate !== "function") {
+        return;
+    }
+
+    modalContent.animate(
+        [
+            { opacity: 0, transform: "translateY(18px) scale(0.96)" },
+            { opacity: 1, transform: "translateY(0) scale(1)" }
+        ],
+        {
+            duration: 360,
+            easing: "cubic-bezier(0.2, 0.8, 0.2, 1)"
+        }
+    );
+});
+//--animasi modal--//
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
